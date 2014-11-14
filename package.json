@@ -1,0 +1,40 @@
+{
+  "name": "kickoff",
+  "description": "kickoff is a Command-Line application using Node.js.",
+  "version": "0.1.0",
+  "tags": [
+    "cli",
+    "util",
+    "tool",
+    "utility"
+  ],
+  "author": {
+    "name": "Tamás Benke",
+    "email": "tombenke@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/tombenke/kickoff/issues"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/tombenke/kickoff/blob/master/LICENSE"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/tombenke/kickoff.git"
+  },
+  "bin": {
+    "ncli": "./bin/cli.js"
+  },
+  "main": "index",
+  "dependencies": {
+    "commander": "2.0.0",
+    "gulp": "^3.8.10",
+    "gulp-debug": "^1.0.1",
+    "gulp-mustache": "^1.0.0",
+    "gulp-order": "^1.1.1",
+    "gulp-through": "^0.3.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-github-src": "^0.1.1"
+  }
+}
