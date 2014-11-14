@@ -24,7 +24,7 @@
     "url": "http://github.com/tombenke/kickoff.git"
   },
   "bin": {
-    "ncli": "./bin/cli.js"
+    "kickoff": "./bin/cli.js"
   },
   "main": "index",
   "dependencies": {
