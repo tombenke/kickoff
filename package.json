@@ -6,7 +6,12 @@
     "cli",
     "util",
     "tool",
-    "utility"
+    "utility",
+    "archetype",
+    "template",
+    "git",
+    "github",
+    "kickoff"
   ],
   "author": {
     "name": "Tamás Benke",
