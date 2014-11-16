@@ -4,6 +4,9 @@ Changelog
 ## Planned with next releases
 - Create documentation pages, and write pipeline for md2html conversion.
 
+## 0.2.2
+- Fix the description text in README file.
+
 ## 0.2.1
 - Fix the intro text in README file.
 
