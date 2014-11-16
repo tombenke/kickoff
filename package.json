@@ -1,7 +1,7 @@
 {
   "name": "kickoff",
   "description": "kickoff is a Command-Line application using Node.js.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "tags": [
     "cli",
     "util",
