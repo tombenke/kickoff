@@ -3,7 +3,8 @@
 'kickoff' is a Command-Line tool, which can be used to easily create boilerplate code for new projects and other things based on archetypes stored in GitHub repos.
 
 1. Install kickoff in global mode.
-2. Create the repository on github for the project template, including mustache templates.
+2. Create the repository on github for the project template,
+   including mustache templates.
 3. Place the .kickoff.yml file,
    to define the questionnaire for collecting parameter values for template files.
 
@@ -27,19 +28,19 @@ Check if kickoff is properly installed:
         -s, --src <username/repository>  Git repository
         -d, --dest <dst>                 Destination folder
 
-## Create the repository on github for the project template
+## Create the repository on GitHub for the project template
 
-This is a normal repository, which can contain anything.
+This is a normal repository, which can contain anything, including mustache templates.
 These files will be copied to the destination folder without modification.
-During this transfer, each file is processed by the mustache template engine, so you can place parameters into these files, which will be replaced by actual values, you can define through the command line interface of the tool.
+During this transfer, each file is processed by the mustache template engine, so you can place parameters into these files, which will be replaced by actual values, that you can define through the command line interface of the tool.
 
-The enquery for these parameters can be defined in the `.kickoff.yml` file, that you can place in the root of the repository.
+The enquiry for these parameters can be described in the `.kickoff.yml` file, that you can place into the root of the repository.
 
 See [ncli-archetype](https://github.com/tombenke/ncli-archetype) repository on GitHub, that is a Project archetype for Command Line tools using Node.js.
 
 ## Create your first project from an existing template repository
 
-The following command will create a new command line tool project with all the required boilerplace code, unsing the [ncli-archetype](https://github.com/tombenke/ncli-archetype) repository:
+The following command will create a new command line tool project with all the required boilerplace code, using the [ncli-archetype](https://github.com/tombenke/ncli-archetype) repository:
 
     $ kickoff -s tombenke/ncli-archetype -d new_app
     ? The name of the application: new_app

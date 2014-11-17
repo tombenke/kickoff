@@ -2,7 +2,13 @@ Changelog
 =========
 
 ## Planned with next releases
-- Create documentation pages, and write pipeline for md2html conversion.
+- Add QA tasks to gulpfile.js
+- Handle the 'description' parameter from .kickoff.yml file.
+- Validate the .kickoff.yml before start the processing.
+
+## 0.2.3
+- Create documentation pages,
+  and write pipeline for md2html conversion.
 
 ## 0.2.2
 - Fix the description text in README file.
