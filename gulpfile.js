@@ -8,7 +8,7 @@ var buffer = require('vinyl-buffer');
 var markdown = require('gulp-markdown');
 
 gulp.task('docgen', function() {
-    gulp.src('docs/*.md', { base: process.cwd() })
+    gulp.src('docs/*.md', {base: 'docs/'})
         .pipe(buffer())
         .pipe(markdown())
         .pipe(rename(function(path) {
@@ -16,13 +16,10 @@ gulp.task('docgen', function() {
         }))
         .pipe(through('subs', function(file, config) {
             var content = file.contents.toString();
-            console.log('================================');
-            console.log('subs.content: ', content);
-            gulp.src('docs/pageTemplate.html')
+            gulp.src('docs/pageTemplate.html', {})
                 .pipe(buffer())
                 .pipe(mustache({body: content}))
-                .pipe(debug())
                 .pipe(rename(file.path))
-                .pipe(gulp.dest());
+                .pipe(gulp.dest('./'));
         }, {})());
 });
