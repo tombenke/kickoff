@@ -47,6 +47,8 @@
     "vinyl-github-src": "^0.1.1"
   },
   "devDependencies": {
-    "gulp": "^3.8.10"
+    "gulp": "^3.8.10",
+    "gulp-markdown": "^1.0.0",
+    "gulp-rename": "^1.2.0"
   }
 }
