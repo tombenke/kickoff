@@ -1,10 +1,10 @@
 ## About
 
-'kickoff' is a Command-Line tool, which can be used to easily create boilerplate code for new projects and other things based on archetypes stored in GitHub repos.
+'kickoff' is a Command-Line tool, which can be used to easily create boilerplate code for new projects and other things based on archetypes stored in GitHub repos or in local directories.
 
 1. Install kickoff in global mode.
-2. Create the repository on github for the project template,
-   including mustache templates.
+2. Create the source files in a local folder or in a repository on github
+   for the project template, including mustache templates.
 3. Place the .kickoff.yml file,
    to define the questionnaire for collecting parameter values for template files.
 
@@ -25,6 +25,7 @@ Check if kickoff is properly installed:
         -h, --help                       output usage information
         -V, --version                    output the version number
         -v, --verbose                    Verbose mode
+        -f, --folder <path>              Path to the source directory
         -s, --src <username/repository>  Git repository
         -d, --dest <dst>                 Destination folder
 
@@ -53,6 +54,26 @@ Check how the parameters requested through the console will substitute the musta
 # The .kickoff.yml configuration file
 
 This is a sample configuration file for the kickoff utility:
+
+    description: |
+        This is a project archetype for node.js based, cli applications.
+        New projects can be generated from this archetype by the
+        [kickoff](https://github.com/tombenke/kickoff) utility.
+
+    welcome: >
+
+        You are generating a JavaScript project, which is 
+        using node.js, and running as a command-line application. 
+
+    postscript: >
+
+        Next steps:
+
+         - Install the npm modules required by the newly generated application:
+
+            cd <dest-folder>
+            npm install
+
 
     questions:
         - 

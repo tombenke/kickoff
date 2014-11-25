@@ -3,8 +3,17 @@ Changelog
 
 ## Planned with next releases
 - Add QA tasks to gulpfile.js
-- Handle the 'description' parameter from .kickoff.yml file.
+- Add `exclude` property to .kickoff.yml with conditionals
+- Add `include` property to .kickoff.yml with conditionals
+- Add `templates` property to .kickoff.yml
+  with `exclude/include` conditionals
 - Validate the .kickoff.yml before start the processing.
+
+
+## 0.3.0
+- Use local folders as source
+- Add 'description' property to .kickoff.yml file.
+- Add welcome and postscript messages to .kickoff.yml
 
 ## 0.2.3
 - Create documentation pages,

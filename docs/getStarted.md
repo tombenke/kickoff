@@ -32,6 +32,7 @@ Check if kickoff is properly installed:
         -h, --help                       output usage information
         -V, --version                    output the version number
         -v, --verbose                    Verbose mode
+        -f, --folder <path>              Path to the source directory
         -s, --src <username/repository>  Git repository
         -d, --dest <dst>                 Destination folder
 

@@ -21,6 +21,25 @@ You can describe the questionnaire for template parameters within the `.kickoff.
 
 This is a sample configuration file for the `kickoff` utility:
 
+    description: |
+        This is a project archetype for node.js based, cli applications.
+        New projects can be generated from this archetype by the
+        [kickoff](https://github.com/tombenke/kickoff) utility.
+
+    welcome: >
+
+        You are generating a JavaScript project, which is 
+        using node.js, and running as a command-line application. 
+
+    postscript: >
+
+        Next steps:
+
+         - Install the npm modules required by the newly generated application:
+
+            cd <dest-folder>
+            npm install
+
     questions:
         - 
             type: input

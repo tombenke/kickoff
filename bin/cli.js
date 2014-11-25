@@ -15,13 +15,23 @@
         .version(thisPackage.version)
         .description('Execute the "project" command with the following parameters')
         .option("-v, --verbose", "Verbose mode", Boolean, false)
+        .option("-f, --folder <path>", "Path to the source directory", String, null)
         .option("-s, --src <username/repository>", "Git repository", String, 'tombenke/ncli-archetype')
         .option("-d, --dest <dst>", "Destination folder", String, './new_project');
 
     program.parse(process.argv);
 
-    app.project.execute({
-            src: program.src,
-            dest: program.dest
-        }, program.verbose);
+    if (program.folder) {
+        app.project.executeFromFolder({
+                src: program.folder,
+                dest: program.dest
+            }, program.verbose);
+    } else if (program.src) {
+        app.project.executeFromGit({
+                src: program.src,
+                dest: program.dest
+            }, program.verbose);
+    } else {
+        console.log('You must define source with either -f or -s.');
+    }
 })();
