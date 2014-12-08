@@ -39,7 +39,6 @@
     "gulp-debug": "^1.0.1",
     "gulp-filter": "^1.0.2",
     "gulp-mustache": "^1.0.0",
-    "gulp-order": "^1.1.1",
     "gulp-through": "^0.3.0",
     "inquirer": "^0.8.0",
     "js-yaml": "^3.2.3",
