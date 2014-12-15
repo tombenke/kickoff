@@ -9,6 +9,8 @@ Changelog
   with `exclude/include` conditionals
 - Validate the .kickoff.yml before start the processing.
 
+## 0.4.0
+- Add '-a, --data-file' argument to load the context data from YAML file instead of querying
 
 ## 0.3.0
 - Use local folders as source

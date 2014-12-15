@@ -25,9 +25,11 @@ Check if kickoff is properly installed:
         -h, --help                       output usage information
         -V, --version                    output the version number
         -v, --verbose                    Verbose mode
+        -a, --data-file <path>           Path to the yaml format datafile
         -f, --folder <path>              Path to the source directory
         -s, --src <username/repository>  Git repository
         -d, --dest <dst>                 Destination folder
+
 
 ## Create the repository on GitHub for the project template
 

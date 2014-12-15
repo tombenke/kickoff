@@ -15,6 +15,7 @@
         .version(thisPackage.version)
         .description('Execute the "project" command with the following parameters')
         .option("-v, --verbose", "Verbose mode", Boolean, false)
+        .option("-a, --data-file <path>", "Path to the yaml format datafile", String, null)
         .option("-f, --folder <path>", "Path to the source directory", String, null)
         .option("-s, --src <username/repository>", "Git repository", String, 'tombenke/ncli-archetype')
         .option("-d, --dest <dst>", "Destination folder", String, './new_project');
@@ -23,11 +24,13 @@
 
     if (program.folder) {
         app.project.executeFromFolder({
+                dataFile: program.dataFile,
                 src: program.folder,
                 dest: program.dest
             }, program.verbose);
     } else if (program.src) {
         app.project.executeFromGit({
+                dataFile: program.dataFile,
                 src: program.src,
                 dest: program.dest
             }, program.verbose);

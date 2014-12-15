@@ -65,3 +65,39 @@ This is a sample configuration file for the `kickoff` utility:
             default: anonymous
 
 You can add as many parameters as you need, using the same names you put into the mustache templates.
+
+##  Load the context data from YAML file instead of querying
+
+Let's suppose, you create a `new_app` executing the following command:
+
+    $ kickoff -s tombenke/ncli-archetype -d new_app
+    ? The name of the application: new_app
+    ? The full name of the author of the application: Tamás Benke
+    ? The email address of the author: tombenke@gmail.com
+    ? The github account (username) of the author: tombenke
+
+You can achive the same result, if you create a YAML file (for example: `desc.yml`), with the following content:
+
+    appname: new_app
+    author_full_name: Tamás Benke
+    author_email: tombenke@gmail.com
+    author_github_account: tombenke
+
+With the `-a, --data-file` argument, you can load the context data in the YAML format file instead of using the interactive inquery via the console, so execute the next command:
+
+    $ kickoff -a ncli.yml -s tombenke/ncli-archetype -d new_app
+
+The result will be something similar to this:
+
+    You are generating a JavaScript project, which is  using node.js, and running as a command-line application. 
+
+    Loading data from ncli.yml instead of querying...
+
+    Next steps:
+
+     - Install the npm modules required by the newly generated application:
+
+        cd <dest-folder>
+        npm install
+
+This method can be used, if the volume of the context data is big, and/or it has a complex structure (nested arrays and objects, etc.).
