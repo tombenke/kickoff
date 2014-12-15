@@ -50,5 +50,10 @@
     "gulp": "^3.8.10",
     "gulp-markdown": "^1.0.0",
     "gulp-rename": "^1.2.0"
+  },
+  "scripts": {
+    "lint": "jshint **.js",
+    "env": "env",
+    "userguide": "cat docs/about.md docs/getStarted.md docs/documentation.md docs/getHelp.md | marked > all.html ; wkhtmltopdf all.html docs/userguide.pdf; rm all.html"
   }
 }
