@@ -57,7 +57,26 @@ During this transfer, each file is processed by the mustache template engine, so
 <h1 id="the-kickoff-yml-file">The <code>.kickoff.yml</code> file</h1>
 <p>You can describe the questionnaire for template parameters within the <code>.kickoff.yml</code> file.</p>
 <p>This is a sample configuration file for the <code>kickoff</code> utility:</p>
-<pre><code>questions:
+<pre><code>description: |
+    This is a project archetype for node.js based, cli applications.
+    New projects can be generated from this archetype by the
+    [kickoff](https://github.com/tombenke/kickoff) utility.
+
+welcome: &gt;
+
+    You are generating a JavaScript project, which is 
+    using node.js, and running as a command-line application. 
+
+postscript: &gt;
+
+    Next steps:
+
+     - Install the npm modules required by the newly generated application:
+
+        cd &lt;dest-folder&gt;
+        npm install
+
+questions:
     - 
         type: input
         name: appname
@@ -81,6 +100,32 @@ During this transfer, each file is processed by the mustache template engine, so
         message: The github account (username) of the author
         default: anonymous
 </code></pre><p>You can add as many parameters as you need, using the same names you put into the mustache templates.</p>
+<h2 id="load-the-context-data-from-yaml-file-instead-of-querying">Load the context data from YAML file instead of querying</h2>
+<p>Let&#39;s suppose, you create a <code>new_app</code> executing the following command:</p>
+<pre><code>$ kickoff -s tombenke/ncli-archetype -d new_app
+? The name of the application: new_app
+? The full name of the author of the application: Tamás Benke
+? The email address of the author: tombenke@gmail.com
+? The github account (username) of the author: tombenke
+</code></pre><p>You can achive the same result, if you create a YAML file (for example: <code>desc.yml</code>), with the following content:</p>
+<pre><code>appname: new_app
+author_full_name: Tamás Benke
+author_email: tombenke@gmail.com
+author_github_account: tombenke
+</code></pre><p>With the <code>-a, --data-file</code> argument, you can load the context data in the YAML format file instead of using the interactive inquery via the console, so execute the next command:</p>
+<pre><code>$ kickoff -a ncli.yml -s tombenke/ncli-archetype -d new_app
+</code></pre><p>The result will be something similar to this:</p>
+<pre><code>You are generating a JavaScript project, which is  using node.js, and running as a command-line application. 
+
+Loading data from ncli.yml instead of querying...
+
+Next steps:
+
+ - Install the npm modules required by the newly generated application:
+
+    cd &lt;dest-folder&gt;
+    npm install
+</code></pre><p>This method can be used, if the volume of the context data is big, and/or it has a complex structure (nested arrays and objects, etc.).</p>
 
         </div>
       </div>

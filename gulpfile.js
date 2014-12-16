@@ -3,7 +3,6 @@ var mustache = require('gulp-mustache');
 var rename = require('gulp-rename');
 var through = require('gulp-through');
 var debug = require('gulp-debug');
-var order = require('gulp-order');
 var buffer = require('vinyl-buffer');
 var markdown = require('gulp-markdown');
 
