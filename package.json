@@ -47,9 +47,14 @@
     "vinyl-github-src": "^0.1.1"
   },
   "devDependencies": {
+    "async": "^0.9.0",
+    "checksum": "^0.1.1",
+    "dirsum": "^0.1.1",
     "gulp": "^3.8.10",
     "gulp-markdown": "^1.0.0",
-    "gulp-rename": "^1.2.0"
+    "gulp-rename": "^1.2.0",
+    "rimraf": "^2.2.8",
+    "should": "^4.4.1"
   },
   "scripts": {
     "lint": "jshint **.js",
