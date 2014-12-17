@@ -17,10 +17,10 @@ var getChecksum = function(ctx, cb) {
 };
 
 var runCli = function(ctx, cb) {
-
     var kickoff = path.resolve('bin/cli.js');
     var child = spawn(kickoff, ctx.cliArgs);
-    child.stdout.pipe(process.stdout);
+
+    // child.stdout.pipe(process.stdout);
     child.on('close', function() {
         cb(null, ctx);
     });

@@ -59,6 +59,7 @@
   "scripts": {
     "lint": "jshint **.js",
     "env": "env",
+    "test": "mocha -R spec",
     "userguide": "cat docs/about.md docs/getStarted.md docs/documentation.md docs/getHelp.md | marked > all.html ; wkhtmltopdf all.html docs/userguide.pdf; rm all.html"
   }
 }
