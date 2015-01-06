@@ -66,6 +66,31 @@ This is a sample configuration file for the `kickoff` utility:
 
 You can add as many parameters as you need, using the same names you put into the mustache templates.
 
+## The `description` property
+
+In the `description` property of the `.kickoff.yml` you can write down what the whole archetype projects is about. This field holds information mainly for those people who creates and/or maintain the archetype project itself.
+
+
+## The `welcome` and `postcript` messages
+
+The `welcome` string will be written to the console, when the kickoff utility starts, in order to inform the user, what will happen during the process.
+
+At the end, before exit, the kickoff will write the `postscript` string to the console, to inform the user about the succesful execution. Also you can place here reminders for things to do after kickoff run.
+
+## File-name templates
+
+The `fileNames` is an optional list of from/to pairs, where `from` is a valid path relative to the base of the projects, and defines the name of the file which should be renamed during the processing. The `to` property defines the new name. It can be either a literal string value or a mustache template. The template values in the `to` filename will be substituted via the context object like in case of the template files in the project.
+
+The next fragment demonstrates how you can define such rename operation using both constant values and file name templates:
+
+    fileNames:
+        -
+            from: docs/pageTemplate.html
+            to: docs/{{appname}}-page-template.html
+        -
+            from: README.md
+            to: ReadMe.md
+
 ##  Load the context data from YAML file instead of querying
 
 Let's suppose, you create a `new_app` executing the following command:

@@ -9,8 +9,14 @@ Changelog
   with `exclude/include` conditionals
 - Validate the .kickoff.yml before start the processing.
 
+## 0.5.0
+
+- Implement the file rename feature with filename templates in .kickoff file.
+- Add test case: testProjectGen.js
+
 ## 0.4.0
 - Add '-a, --data-file' argument to load the context data from YAML file instead of querying
+- Add 'npm run userguide' command to generate docs/userguide.pdf
 
 ## 0.3.0
 - Use local folders as source
