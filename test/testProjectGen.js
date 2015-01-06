@@ -20,7 +20,7 @@ var runCli = function(ctx, cb) {
     var kickoff = path.resolve('bin/cli.js');
     var child = spawn(kickoff, ctx.cliArgs);
 
-    // child.stdout.pipe(process.stdout);
+    child.stdout.pipe(process.stdout);
     child.on('close', function() {
         cb(null, ctx);
     });
@@ -42,17 +42,17 @@ describe('Generates a new project from archetype', function() {
             expected1: {
                 "files": {
                     ".gitignore": "9193e35d8b7fc33d768461505160c12c96c608bd",
-                    "README.md": "f8c8bec34cc115169049f664fafaf7e26e109843",
+                    'ReadMe.md': 'f8c8bec34cc115169049f664fafaf7e26e109843',
                     "docs": {
                         "files": {
-                            "pageTemplate.html": "c7aa9952c44e228e3144e03d256251eaff01d864"
+                            "new_app-page-template.html": "c7aa9952c44e228e3144e03d256251eaff01d864"
                         },
                         "hash": "e7760370dfb44b3b5379f5f32cad4b7c5d98550f"
                     }
                 },
                 "hash": "7d837eb1a5ba16c089d2f0d551267abf7f83656c"
             },
-            expected2: "a935809668946fa7d9939a491918c9c081823ce6"
+            expected2: "25ff213eac36f663c23a7a924246c7fae6beab94"
         };
 
         async.waterfall([

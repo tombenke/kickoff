@@ -13,7 +13,7 @@
 
     program
         .version(thisPackage.version)
-        .description('Execute the "project" command with the following parameters')
+        .description('Execute the command with the following parameters')
         .option("-v, --verbose", "Verbose mode", Boolean, false)
         .option("-a, --data-file <path>", "Path to the yaml format datafile", String, null)
         .option("-f, --folder <path>", "Path to the source directory", String, null)

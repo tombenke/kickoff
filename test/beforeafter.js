@@ -25,7 +25,8 @@
     });
 
     after(function(done) {
-        destCleanup(function() { done(); });
+        // destCleanup(function() { done(); });
+        done();
     });
 
 })();

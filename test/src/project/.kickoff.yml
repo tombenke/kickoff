@@ -44,3 +44,11 @@ questions:
         name: author_github_account
         message: The github account (username) of the author
         default: anonymous
+
+fileNames:
+    -
+        from: docs/pageTemplate.html
+        to: docs/{{appname}}-page-template.html
+    -
+        from: README.md
+        to: ReadMe.md
