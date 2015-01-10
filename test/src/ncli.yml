@@ -2,3 +2,16 @@ appname: new_app
 author_full_name: Tamás Benke
 author_email: tombenke@gmail.com
 author_github_account: tombenke
+data:
+    -
+        name: obj 1
+        items:
+            - item1_1
+            - item1_2
+            - item1_3
+    -
+        name: obj 2
+        items:
+            - item2_1
+            - item2_2
+            - item2_3

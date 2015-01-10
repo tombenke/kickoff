@@ -45,6 +45,15 @@ questions:
         message: The github account (username) of the author
         default: anonymous
 
+converters:
+    mustache:
+        - README.md
+        - docs/pageTemplate.html
+    handlebars:
+        - data/data.json
+    plugin:
+        - data/configWriter.js
+
 fileNames:
     -
         from: docs/pageTemplate.html
@@ -52,3 +61,6 @@ fileNames:
     -
         from: README.md
         to: ReadMe.md
+    -
+        from: data/configWriter.js
+        to: config.json

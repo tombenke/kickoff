@@ -34,6 +34,7 @@ var checkResults = function(ctx, cb) {
 
 describe('Generates a new project from archetype', function() {
     it('Generates project from data file', function(done) {
+        this.timeout(50000);
         var src = 'test/src/project/';
         var dest = 'test/dest/project/';
         var ctx = {
