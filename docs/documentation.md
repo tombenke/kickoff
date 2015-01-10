@@ -64,6 +64,16 @@ This is a sample configuration file for the `kickoff` utility:
             message: The github account (username) of the author
             default: anonymous
 
+    converters:
+        mustache:
+            - docs/about.md
+            - docs/getHelp.md
+            - docs/getStarted.md
+            - docs/pageTemplate.html
+            - index.html
+            - package.json
+            - README.md
+
 You can add as many parameters as you need, using the same names you put into the mustache templates.
 
 ## The `description` property
@@ -76,6 +86,11 @@ In the `description` property of the `.kickoff.yml` you can write down what the 
 The `welcome` string will be written to the console, when the kickoff utility starts, in order to inform the user, what will happen during the process.
 
 At the end, before exit, the kickoff will write the `postscript` string to the console, to inform the user about the succesful execution. Also you can place here reminders for things to do after kickoff run.
+
+## Questions
+
+This section contains the list of questions and parameters the kickoff will collect during its working.
+The tool sets the variables to their default values that you can overwrite during the questioning, then the given parameters will be used by the tool to fill the templates during the generation of the target content.
 
 ## File-name templates
 
@@ -90,6 +105,31 @@ The next fragment demonstrates how you can define such rename operation using bo
         -
             from: README.md
             to: ReadMe.md
+
+## Converters
+
+By default the `kickoff` simply copies the files from the source to the target, but you can use converters to fill your data into the files that have been collected via questions. These conterverters can be templates or JavaScript functions. You can define which file can be taken as a converter and what type of conversion does it do. Currently the following converters can be defined:
+
+converters:
+    mustache:
+        // Here you can define those files that are mustache templates,
+        // for example in case of ncli-archetype these templates are used:
+        - docs/about.md
+        - docs/getHelp.md
+        - docs/getStarted.md
+        - docs/pageTemplate.html
+        - index.html
+        - package.json
+        - README.md
+    handlebars:
+        // In case you need a more sophisticated template engine,
+        // you can use the Handlebars engine
+    plugin:
+        // Here you can refer to plain JavaScript modules which are exporting a single function,
+        // that consumes a String and returns with a result String. The function also got the context
+        // data that was defined via the questionnaire, or via the dedicated data file with the `-a` which.
+
+In the `test/src` folder you can find samples to each kind of converter.
 
 ##  Load the context data from YAML file instead of querying
 

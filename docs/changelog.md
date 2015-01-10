@@ -9,6 +9,15 @@ Changelog
   with `exclude/include` conditionals
 - Validate the .kickoff.yml before start the processing.
 
+## 0.6.0
+
+- Add converters section to the .kickoff.yml files
+- Add handlebars and mustache template converters.
+  NOTE: The old projects using mustache templates will only work with this version 
+        if you list them under the `converter.mustache` section of the .kickoff.yml file.
+- Add JavaScript converter plugin feature
+- Extend the test cases according to the changes
+
 ## 0.5.0
 
 - Implement the file rename feature with filename templates in .kickoff file.

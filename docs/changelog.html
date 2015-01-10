@@ -55,9 +55,24 @@
 with <code>exclude/include</code> conditionals</li>
 <li>Validate the .kickoff.yml before start the processing.</li>
 </ul>
+<h2 id="0-6-0">0.6.0</h2>
+<ul>
+<li>Add converters section to the .kickoff.yml files</li>
+<li>Add handlebars and mustache template converters.
+NOTE: The old projects using mustache templates will only work with this version <pre><code>  if you list them under the `converter.mustache` section of the .kickoff.yml file.
+</code></pre></li>
+<li>Add JavaScript converter plugin feature</li>
+<li>Extend the test cases according to the changes</li>
+</ul>
+<h2 id="0-5-0">0.5.0</h2>
+<ul>
+<li>Implement the file rename feature with filename templates in .kickoff file.</li>
+<li>Add test case: testProjectGen.js</li>
+</ul>
 <h2 id="0-4-0">0.4.0</h2>
 <ul>
 <li>Add &#39;-a, --data-file&#39; argument to load the context data from YAML file instead of querying</li>
+<li>Add &#39;npm run userguide&#39; command to generate docs/userguide.pdf</li>
 </ul>
 <h2 id="0-3-0">0.3.0</h2>
 <ul>
