@@ -131,6 +131,8 @@ converters:
 
 In the `test/src` folder you can find samples to each kind of converter.
 
+NOTE: The plugin type of converters currently work only in cases when you generating from local sources.
+
 ##  Load the context data from YAML file instead of querying
 
 Let's suppose, you create a `new_app` executing the following command:
