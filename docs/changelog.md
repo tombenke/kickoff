@@ -9,6 +9,10 @@ Changelog
   with `exclude/include` conditionals
 - Validate the .kickoff.yml before start the processing.
 
+## 0.6.1
+
+- Replace '/' with path.sep in file rename.
+
 ## 0.6.0
 
 - Add converters section to the .kickoff.yml files
