@@ -104,3 +104,4 @@ This is a sample configuration file for the kickoff utility:
 You can add as many parameters as you need, using the same names you put into the mustache templates.
 
 To learn more about the tool visit the [homepage](http://tombenke.github.io/kickoff/).
+
