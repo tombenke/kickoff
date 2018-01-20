@@ -9,6 +9,11 @@ Changelog
   with `exclude/include` conditionals
 - Validate the .kickoff.yml before start the processing.
 
+## 0.7.0
+
+Add built-in template functions, such as: _toUpperCase(), _toLowerCase(), _firstCharToUpperCase(), _firstCharToLowerCase()
+
+
 ## 0.6.2
 
 - Replace '/' with path.sep in converters.

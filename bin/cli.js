@@ -13,7 +13,7 @@
 
     program
         .version(thisPackage.version)
-        .description('Execute the command with the following parameters')
+        .description('kickoff - creates boilerplates from Github repo or local folder')
         .option("-v, --verbose", "Verbose mode", Boolean, false)
         .option("-a, --data-file <path>", "Path to the yaml format datafile", String, null)
         .option("-f, --folder <path>", "Path to the source directory", String, null)

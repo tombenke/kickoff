@@ -57,13 +57,16 @@
     "gulp": "^3.8.10",
     "gulp-markdown": "^1.0.0",
     "gulp-rename": "^1.2.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^4.0.0",
     "rimraf": "^2.2.8",
     "should": "^4.4.1"
   },
   "scripts": {
     "lint": "jshint **.js",
     "env": "env",
-    "test": "mocha -R spec",
+    "test": "mocha -R spec 'lib/**/*.js'",
+    "coverage": "NODE_ENV=test istanbul cover _mocha -- recursive --timeout 15000 'lib/**/*.js'",
     "userguide": "cat docs/about.md docs/getStarted.md docs/documentation.md docs/getHelp.md | marked > all.html ; wkhtmltopdf all.html docs/userguide.pdf; rm all.html"
   }
 }
