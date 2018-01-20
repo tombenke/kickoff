@@ -1,7 +1,7 @@
 {
   "name": "kickoff",
   "description": "A Command-Line tool, which can be used to easily create boilerplate code for new projects and other things based on archetypes stored in GitHub repos.",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "tags": [
     "cli",
     "util",
